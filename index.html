@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>This is a test</title>
+        <style>
+            .bee {
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="beeContainer">
+            <img src="abeja0.png" alt="Abeja" class="bee" id="bee" />
+        </div>
+        <script>
+            let currentBee = 0;
+            document.querySelector("#bee").addEventListener("click", (e) => {
+                let amountOfBeeStages = 6;
+                currentBee = (currentBee + 1) % amountOfBeeStages;
+                e.target.src = `abeja${currentBee}.png`;
+            });
+        </script>
+    </body>
+</html>
